@@ -26,6 +26,16 @@
 - Todos os filtros, além da cidade, são opcionais
 - Para uma ORG acessar a aplicação como admin, ela precisa estar logada
 
+### Rotas
+
+- [ ] `GET /orgs` 
+- [ ] `POST /orgs` - `id`, `name`, `address`, `whatsapp` -> register
+- [ ] `POST /orgs/authenticate` -> authenticate
+
+- [ ] `POST /orgs/pets` - `id`, `name`, `age`, `category` (dog/cat) -> com verificação de jwt
+- [ ] `GET /orgs/pets` - parâmetros: `city: (string) obrigatório`
+- [ ] `GET /orgs/pets/{id}`
+
 ### Configurando e executando:
 
 ```

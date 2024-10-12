@@ -1,0 +1,7 @@
+# FILES
+.env
+
+# FOLDERS
+node_modules
+build
+coverage

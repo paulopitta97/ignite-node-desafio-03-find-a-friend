@@ -1,0 +1,13 @@
+# docker run --name api-findafriend-pg -e POSTGRESQL_USERNAME=docker -e POSTGRESQL_PASSWORD=docker -e POSTGRESQL_DATABASE=apifindafriend -p 5432:5432 bitnami/postgresql:latest
+
+version: '3'
+
+services:
+  api-findafriend-pg:
+    image: bitnami/postgresql:latest
+    ports:
+      - 5432:5432
+    environment:
+      - POSTGRESQL_USERNAME=docker
+      - POSTGRESQL_PASSWORD=docker
+      - POSTGRESQL_DATABASE=apifindafriend
