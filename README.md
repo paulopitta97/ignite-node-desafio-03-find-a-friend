@@ -39,26 +39,11 @@
 
 ### Configurando e executando:
 
-```
-npm install
-npm run knex -- migrate:latest
-npm run dev
-```
-
-### Executando os testes:
-
-```
-npm run test
-```
-
-### 📝 Licença
-
-- [MIT](https://github.com/paulopitta97/ignite-node-desafio-03-find-a-friend/blob/master/LICENSE) © [Paulo Pitta](https://github.com/paulopitta97)
-
-###
-
-> Solução: Certifique-se de que o banco de dados está sincronizado com o arquivo schema.prisma. Se necessário, rode:
-`npx prisma db push`
+- `docker compose up -d`
+- `npm install`
+- `npx prisma db push`
+- `npx prisma migrate deploy`
+- `npm run start:dev`
 
 ## Para Rodar os Testes E2E (Controllers):
 
@@ -68,3 +53,7 @@ npm run test
 ## Para Rodar os Testes Unitários (Use Cases):
 
 - `npm run test`
+
+### 📝 Licença
+
+- [MIT](https://github.com/paulopitta97/ignite-node-desafio-03-find-a-friend/blob/master/LICENSE) © [Paulo Pitta](https://github.com/paulopitta97)
