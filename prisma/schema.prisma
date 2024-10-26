@@ -16,10 +16,10 @@ enum Category {
 }
 
 model Org {
-  id       String @id @default(uuid())
+  id       String  @id @default(uuid())
   name     String
-  email    String @unique
-  whatsapp String
+  email    String  @unique
+  whatsapp String?
   password String
 
   cep          String
