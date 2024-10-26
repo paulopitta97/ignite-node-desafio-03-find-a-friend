@@ -1,4 +1,4 @@
-import { PrismaOrgsRepository } from '@/repositories/prisma/prima.orgs.repository'
+import { PrismaOrgsRepository } from '@/repositories/prisma/prisma.orgs.repository'
 import { GetOrgUseCase } from '../get-org'
 
 export function makeGetOrgUseCase() {

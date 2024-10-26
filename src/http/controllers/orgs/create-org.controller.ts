@@ -3,7 +3,7 @@ import { z } from 'zod'
 import { makeCreateOrgUseCase } from '@/use-cases/factories/make-create-org-use-case'
 
 export async function create(request: FastifyRequest, reply: FastifyReply) {
-  console.log( request.body )
+
   const createOrgBodySchema = z.object({
     name: z.string(),
     email: z.string(),

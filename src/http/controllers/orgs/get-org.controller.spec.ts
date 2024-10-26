@@ -29,7 +29,6 @@ describe('GET ORG (e2e)', () => {
       .get(`/orgs/${orgId}`)
       .send()
 
-      console.log( getOrgResponse.body )
     expect(getOrgResponse.statusCode).toEqual(200)
     expect(getOrgResponse.body).toHaveProperty('email', data.email);
   })

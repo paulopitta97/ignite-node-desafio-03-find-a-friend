@@ -32,15 +32,8 @@ export default <Environment>{
     try {
       // Usando migrate reset para garantir a criação de todas as tabelas no novo schema
       // Mudança: Force a criação do schema e tabela
-      console.log(`Applying migrations for schema: ${schema}`);
       execSync('npx prisma migrate reset --force');
       execSync('npx prisma migrate deploy')
-      console.log('Migrations applied successfully.');
-      console.log(`Database URL: ${process.env.DATABASE_URL}`);
-      
-      const tables = await prisma.$executeRaw`SELECT table_name FROM information_schema.tables WHERE table_schema = '${schema}'`;
-      console.log(tables);
-
     } catch (error) {
       console.error('Failed to reset and migrate database:', error);
     }

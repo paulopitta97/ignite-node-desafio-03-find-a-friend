@@ -10,7 +10,7 @@
 
 ### Regras da aplicação ✔️
 
-- Deve ser possível cadastrar um pet
+- Deve ser possível cadastrar um pet ✔️
 - Deve ser possível listar todos os pets disponíveis para adoção em uma cidade
 - Deve ser possível filtrar pets por suas características
 - Deve ser possível visualizar detalhes de um pet para adoção
@@ -24,7 +24,7 @@
 - Um pet deve estar ligado a uma ORG ✔️
 - O usuário que quer adotar, entrará em contato com a ORG via WhatsApp
 - Todos os filtros, além da cidade, são opcionais
-- Para uma ORG acessar a aplicação como admin, ela precisa estar logada
+- Para uma ORG acessar a aplicação como admin, ela precisa estar logada ✔️
 
 ### Rotas
 
@@ -35,7 +35,7 @@
 
 - [ ] `GET /orgs/pets` -> search - parâmetros: `city: (string) obrigatório`
 - [ ] `GET /orgs/pets/{id}` -> with id
-- [ ] `POST /orgs/pets` - `id`, `name`, `age`, `category` (dog/cat) -> com verificação de jwt
+- [x] `POST /orgs/pets` - `id`, `name`, `age`, `category` (dog/cat) -> com verificação de jwt
 
 ### Configurando e executando:
 
