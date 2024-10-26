@@ -25,5 +25,5 @@ export async function create(request: FastifyRequest, reply: FastifyReply) {
     name, email, whatsapp, password, cep, state, city, neighborhood, street
   })
 
-  return reply.status(201).send( { org } )
+  return reply.status(201).send( { ...org, password: undefined } )
 }
