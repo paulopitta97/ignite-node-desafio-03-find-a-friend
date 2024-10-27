@@ -12,7 +12,7 @@ let sut: CreatePetUseCase
 describe('Create PET Use Case', () => {
   beforeEach(() => {
     orgsRepository = new InMemoryOrgsRepository()
-    petsRepository = new InMemoryPetsRepository()
+    petsRepository = new InMemoryPetsRepository(orgsRepository)
     sut = new CreatePetUseCase(petsRepository, orgsRepository)
   })
 

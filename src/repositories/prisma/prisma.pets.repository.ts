@@ -1,5 +1,5 @@
 import { Pet, Prisma } from '@prisma/client'
-import { PetsRepository } from '../pets.repository'
+import { FindAllParams, PetsRepository } from '../pets.repository'
 import { prisma } from '@/lib/prisma'
 
 export class PrismaPetsRepository implements PetsRepository {
@@ -9,18 +9,23 @@ export class PrismaPetsRepository implements PetsRepository {
     return pet
   }
 
-  /*async searchMany(query: string, page: number) {
+  async findAll(params: FindAllParams, page: number): Promise<Pet[]> {
     const pets = await prisma.pet.findMany({
       where: {
-        title: {
-          contains: query,
+        age: params.age,
+        category: params.category,
+        org: {
+          city: {
+            contains: params.city,
+            mode: 'insensitive',
+          },
         },
       },
       take: 20,
       skip: (page - 1) * 20,
     })
     return pets
-  }*/
+  }
 
   async findById(id: string) {
     const pet = await prisma.pet.findUnique({

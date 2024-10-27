@@ -1,7 +1,13 @@
-import { Pet, Prisma } from '@prisma/client'
+import { Category, Pet, Prisma } from '@prisma/client'
+
+export interface FindAllParams {
+  city: string
+  age?: string
+  category?: Category
+}
 
 export interface PetsRepository {
   findById(id: string): Promise<Pet | null>
-  // searchMany(query: string, page: number): Promise<Pet[]>
+  findAll(params: FindAllParams, page: number): Promise<Pet[]>
   create(data: Prisma.PetUncheckedCreateInput): Promise<Pet>
 }
