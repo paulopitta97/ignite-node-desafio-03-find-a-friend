@@ -1,0 +1,210 @@
+{
+	"info": {
+		"_postman_id": "caec9461-2d05-49c8-b69a-9c63d86bbd22",
+		"name": "ignite-node-desafio-03",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "27038131"
+	},
+	"item": [
+		{
+			"name": "Pets",
+			"item": [
+				{
+					"name": "CREATE Pet",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "ACCESS_TOKEN_AQUI",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"Doguinho 1\",\r\n    \"about\": \"Sobre o cachorro Doguinho 1\",\r\n    \"age\": \"2\",\r\n    \"category\": \"DOG\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{host}}/orgs/pets",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"orgs",
+								"pets"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GET WITH ID",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{host}}/orgs/pets/35fa846c-65fd-4d34-acc4-d7bcb22a75a7",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"orgs",
+								"pets",
+								"35fa846c-65fd-4d34-acc4-d7bcb22a75a7"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "SEARCH BY CITY",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{host}}/orgs/pets?page=1&city=São Paulo&category=DOG&age=2",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"orgs",
+								"pets"
+							],
+							"query": [
+								{
+									"key": "page",
+									"value": "1"
+								},
+								{
+									"key": "city",
+									"value": "São Paulo"
+								},
+								{
+									"key": "category",
+									"value": "DOG"
+								},
+								{
+									"key": "age",
+									"value": "2"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Orgs",
+			"item": [
+				{
+					"name": "CREATE Org",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"Fake ORG 1\",\r\n    \"email\": \"fakeorg@devxpto.com\",\r\n    \"whatsapp\": \"123456\",\r\n    \"password\": \"fakepassword\",\r\n    \"cep\": \"01153-000\",\r\n    \"state\": \"São Paulo\",\r\n    \"city\": \"São Paulo\",\r\n    \"neighborhood\": \"Barra Funda\",\r\n    \"street\": \"Rua Vitorino Carmilo\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{host}}/orgs",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"orgs"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GET WITH ID",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{host}}/orgs/a11590b3-d94d-474e-957e-6ba1027eb8a0",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"orgs",
+								"a11590b3-d94d-474e-957e-6ba1027eb8a0"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Authenticate",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"email\": \"fakeorg@devxpto.com\",\r\n    \"password\": \"fakepassword\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{host}}/orgs/authenticate",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"orgs",
+								"authenticate"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "host",
+			"value": "localhost:3333",
+			"type": "string"
+		}
+	]
+}
