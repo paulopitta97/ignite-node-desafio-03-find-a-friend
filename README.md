@@ -4,9 +4,9 @@
 
 ![banner-ignite-nodejs-600x-42e1ab80-77af-11eb-9e07-47f9e46b3e6e](https://user-images.githubusercontent.com/52472087/224563992-1fbf29d0-06d9-4b58-b9d0-522f3f283f1e.png)
 
-- Consiste em uma API RESTful com Node.js para a adoção de animais com `Fastify`, `Knex/Prisma` (com `Migrations`), `Zod`, etc.
+- Consiste em uma API RESTful com Node.js para a adoção de animais com `Fastify`, `Prisma` (com `Migrations`), `Zod`, etc.
 - Foram utilizadas `eslint`, `dotenv`, entre outros. Banco de dados relacional `Postgre`.
-- Foram realizados testes com `vitest` e `supertest`. 
+- Foram realizados testes com `vitest` e `supertest`. Também foi usado o `Docker`.
 
 ### Regras da aplicação ✔️
 
@@ -49,9 +49,13 @@
 - `npm run pretest:e2e`
 - `npm run test:e2e`
 
+![e2e-controllers-tests](https://github.com/user-attachments/assets/e8cd9947-7cb2-4e6d-bea0-ab14c4ff59c6)
+
 ## Para Rodar os Testes Unitários (Use Cases):
 
 - `npm run test`
+
+![use-cases-tests](https://github.com/user-attachments/assets/373893a1-eb31-461d-a7b3-293c891420c1)
 
 ### 📝 Licença
 
